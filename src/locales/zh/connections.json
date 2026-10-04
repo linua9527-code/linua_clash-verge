@@ -1,0 +1,57 @@
+{
+  "page": {
+    "title": "连接"
+  },
+  "components": {
+    "fields": {
+      "host": "主机",
+      "dlSpeed": "下载速度",
+      "ulSpeed": "上传速度",
+      "chains": "链路",
+      "rule": "规则",
+      "process": "进程",
+      "time": "连接时间",
+      "source": "源地址",
+      "destination": "目标地址",
+      "destinationPort": "目标端口",
+      "type": "类型"
+    },
+    "order": {
+      "default": "默认",
+      "uploadSpeed": "上传速度",
+      "downloadSpeed": "下载速度"
+    },
+    "actions": {
+      "active": "活跃",
+      "closed": "已关闭",
+      "closeConnection": "关闭连接"
+    },
+    "columnManager": {
+      "title": "列设置",
+      "dragHandle": "拖拽控件"
+    },
+    "processTraffic": {
+      "title": "进程流量",
+      "period": {
+        "day": "今日",
+        "week": "近 7 天",
+        "month": "近 30 天",
+        "custom": "自定义"
+      },
+      "custom": {
+        "startDate": "开始日期",
+        "endDate": "结束日期",
+        "apply": "应用"
+      },
+      "fields": {
+        "process": "进程",
+        "download": "下载",
+        "upload": "上传",
+        "total": "总计"
+      },
+      "total": "上传 {{upload}}，下载 {{download}}",
+      "unknownProcess": "未知进程",
+      "empty": "暂无流量统计"
+    }
+  }
+}
