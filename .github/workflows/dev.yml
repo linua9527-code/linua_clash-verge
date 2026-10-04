@@ -74,7 +74,10 @@ jobs:
 
       - name: Install Rust Stable
         if: github.event.inputs[matrix.input] == 'true'
-        uses: dtolnay/rust-toolchain@1.98.1
+        uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: '1.98.1'
+          targets: ${{ matrix.target }}
 
       - name: Rust Cache
         uses: Swatinem/rust-cache@v2
@@ -85,7 +88,6 @@ jobs:
           workspaces: |
             . -> target
           cache-all-crates: true
-          cache-workspace-crates: true
 
       - name: Install dependencies (ubuntu only)
         if: matrix.os == 'ubuntu-22.04' && github.event.inputs[matrix.input] == 'true'
@@ -93,7 +95,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y libxslt1.1 libwebkit2gtk-4.1-dev libayatana-appindicator3-dev librsvg2-dev patchelf
 
-      - uses: pnpm/action-setup@v6
+      - uses: pnpm/action-setup@v4
         name: Install pnpm
         if: github.event.inputs[matrix.input] == 'true'
         with:
